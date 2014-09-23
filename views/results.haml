@@ -1,0 +1,14 @@
+- if results.empty?
+  %h2 This assessment isn't complete. Please return and complete the assessment
+  %div
+    %a(href="/assessments/slides/#{assessment_id}") Return to Assessment
+- else
+  %h2 Your Personality Blend
+  %div
+    %img(src="#{results.personality_blend.personality_type_1.badge.image_small}")
+    %p
+      #{results.personality_blend.personality_type_1.name}
+  %div
+    %img(src="#{results.personality_blend.personality_type_2.badge.image_small}")
+    %p
+      #{results.personality_blend.personality_type_2.name}
