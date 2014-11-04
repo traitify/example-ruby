@@ -24,7 +24,7 @@ end
 
 # Create an assessment for a specific deck and respond with the show page
 get '/assessments/:deck' do
-  haml :show, locals: { assessment: traitify.create_assessment(deck_id: params[:deck]) }
+  haml :show, locals: { assessment: Traitify.new.create_assessment(deck_id: params[:deck]) }
 end
 
 # Get the slides for an assessment. This is where the assessment is taken by
